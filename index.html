@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="loginPage" class="login-page">
+    <div class="login-box">
+        <h1>🏥 Hospital Management</h1>
+        <p>Admin Login</p>
+
+        <form id="loginForm">
+            <input id="username" placeholder="Username" required>
+            <input id="password" type="password"
+                   placeholder="Password" required>
+            <button type="submit">Login</button>
+            <p id="loginError"></p>
+        </form>
+    </div>
+</div>
+
+<!-- MAIN APPLICATION -->
+<div id="appPage" class="app-page hidden">
+
+    <header>
+        <h2>🏥 Hospital Management System</h2>
+        <button class="logout" onclick="logout()">Logout</button>
+    </header>
+
+    <nav>
+        <button onclick="showSection('dashboard')">Dashboard</button>
+        <button onclick="showSection('patients')">Patients</button>
+        <button onclick="showSection('doctors')">Doctors</button>
+        <button onclick="showSection('appointments')">Appointments</button>
+        <button onclick="showSection('billing')">Billing</button>
+    </nav>
+
+    <main id="content"></main>
+
+    <footer>Hospital Management System | Owned by Mahzaaben Alam</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

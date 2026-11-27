@@ -1,0 +1,44 @@
+{
+  "name": "hospital-management",
+  "version": "1.0.0",
+  "description": "Offline Hospital Management System",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win"
+  },
+  "devDependencies": {
+    "electron": "^39.8.10",
+    "electron-builder": "^26.5.4"
+  },
+  "build": {
+    "appId": "com.hospital.management",
+    "productName": "Hospital Management System",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "index.html",
+      "style.css",
+      "script.js",
+      "package.json",
+      "icon.ico"
+    ],
+    "win": {
+      "icon": "icon.ico",
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "installerIcon": "icon.ico",
+      "uninstallerIcon": "icon.ico"
+    }
+  },
+  "allowScripts": {
+    "electron@39.8.10": true
+  }
+}
